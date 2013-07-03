@@ -13,6 +13,12 @@ set :database, "sqlite3:///student.db"
 module Blog 
 
   class App < Sinatra::Base
+
+    get '/' do 
+      @students = Student.all
+      erb :index
+    end
+
   end
-  
+
 end
