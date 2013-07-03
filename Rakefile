@@ -16,3 +16,19 @@ task :populate_database do
   end
 
 end
+
+desc "retreive latest blog posts"
+
+task :get_recent_post do
+
+  Student.all.each do |student|
+    feed_url = "#{student.url}/atom.xml"
+
+    # takes a URL i.e. jeneisen.github.io/atom.xml
+    Feedzirra::Feed.fetch_and_parse(feed_url,
+      :on_success => lambda {|url, feed| student.latest_post = feed.entries.first.content; student.save },
+      :on_failure => lambda {|url, feed| puts "Got a 404" }
+    )
+  end
+
+end

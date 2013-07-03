@@ -1,0 +1,47 @@
+<p>The sinatra-examples folder structure at first glance appears to be very large but fortunately very organized.  On the first screen there are five folders as well as a three additional files.  These additional files are :</p>
+
+<p>.rvmrc &ndash; This is a small file which appears to list the ruby version in which the program runs on.</p>
+
+<p>README.md &ndash; This file appears to give a brief outline of the five folders as well as a setup guide to install the files and run them on a local computer.</p>
+
+<p>classic.rb &ndash; This file appears to show a brief example of what a sinatra app looks like.  By requiring &lsquo;sinatra&rsquo; at the top, this could mean that sinatra gives a large framework for a program and customization can occur.</p>
+
+<p>The first of the five large folders is:</p>
+
+<h3>Assetpack</h3>
+
+<p>assetpack &ndash; This large folders contains four additional folders as well a seven files.  The first additional folder is:</p>
+
+<p>.sass-cache &ndash; Google claims this folder is used for making compiling faster.  It appears as if sinatra creates this folder automatically.  Within this folder are two additional folders which each hold contents that are very similar to images.</p>
+
+<p>app &ndash; This folder holds css files in their own folder, images in their own folder, and js in their own folder which also holds query files.</p>
+
+<p>lib &ndash; This library folder is very large.  It holds a sinatra folder.  That sinatra folder holds as asset pack folder.  That asset pack folder looks like it holds files all containing the sinatra Module and many different sub-modules.</p>
+
+<p>views &ndash; The views folder here holds a file index.erb.  This would be the erg template for the index page of the app.</p>
+
+<p>The assetpack folder also contains a few other files also including a Gemfile which requires additional gems to power the application.</p>
+
+<h3>Middleware</h3>
+
+<p>middleware &ndash; the middleware folder is the second folder on the top level.  This folder contains two sub-folders:</p>
+
+<p>basic_auth &ndash; this folder holds an app.rb files, which appears th eve the basic authentication file for the application.  It also holders the config.ru file which appears to run the authentication file above.</p>
+
+<p>examples &ndash; the example folder is filled with a few files.  Most of them appear to be in some form of Rack in which they are sending information to the server and receiving back status, headers, and responses.  There is also a no_chrone_middleware files which is interesting to me.  The content of the file appear to redirect the user to Internet Explorers default download page.  Does this file send users without Chrome to IE?  The config.ru rile which was also listed in the basic_auth file also runs the application, but my question is which application is it running?</p>
+
+<h3>Modular</h3>
+
+<p>modular &ndash; this is the third folder on the top level of the application.  This folder only contains two files.  It contains a config.ru files which runs the application in the modular folder and a modular.rb file which inputs a sinatra base modular into the application.</p>
+
+<h3>Multiple-app</h3>
+
+<p>multiple-app &ndash; this is the fourth top level folder which holds a websites folder and a config.ru files.  The config.ru file here runs the application but I am unsure as to which part of the application gets ran from this specific file.  The website folder contains four files; blog, init, search, and site.  The blog file appears to put a sinatra modular into the blog class which I am guessing powers the blog portion of the site.  The init file requires other parts of the site I am assuming at the beginning.  The search file is similar to the blog file in which a modular is being passed into the search class.  The site file is also similar to the blog file in which a sinatra modular is being passed into the site class.  In all three instances, the same modular is being passed into the blog, search, and site .rb files.</p>
+
+<h3>View</h3>
+
+<p>view &ndash; the view folder is the fifth top level folder which contains a view folder as well as an app.rb file and a config.ru files.</p>
+
+<p>views &ndash; the views folder has a admin folder as well as a few additional erg and haml files.  The erg files I am assuming are template files for the index, layout, and my_partial.  The admin folder appears to hold an erb file that is the outline of the administration section or page of the application.</p>
+
+<p>After doing this assignment I can better see how to structure the files of an application.  I am sure as I get more involved with Sinatra I will see repeat structures as well as files in specific folders.</p>

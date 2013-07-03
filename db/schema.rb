@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130703154723) do
+ActiveRecord::Schema.define(version: 20130703164501) do
 
   create_table "students", force: true do |t|
     t.string "name"
     t.string "url"
+    t.text   "latest_post", limit: 255
   end
 
 end
